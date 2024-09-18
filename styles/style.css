@@ -32,7 +32,9 @@
   border: 2px solid var(--accent-color, #000000);
   background-color: var(--background-color, #ffffff);
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
-  margin: 100px clamp(0px, -8.1426rem + 34.7418vw, 370px);
+  max-inline-size: 700px;
+  margin-block: 100px;
+  margin-inline: auto;
 }
 
 .header__title {
@@ -121,7 +123,8 @@
   justify-items: center;
   border: 2px solid var(--accent-color, #000000);
   background-color: var(--background-color, #ffffff);
-  margin-inline: clamp(0px, -8.1426rem + 34.7418vw, 370px);
+  max-inline-size: 700px;
+  margin-inline: auto;
   margin-block-end: 50px;
 }
 
@@ -147,8 +150,8 @@
   font-size: 14px;
   line-height: 1;
   mix-blend-mode: hard-light;
-  inset-block-start: 24px;
-  inset-inline-end: 25px;
+  inset-block-start: clamp(22px, 1.331rem + 0.1878vw, 24px);
+  inset-inline-end: clamp(11px, 0.3794rem + 1.3146vw, 25px);
 }
 
 .card__image {
@@ -184,7 +187,6 @@
 
 .filter-multiple {
   filter: hue-rotate(110deg) invert(0.2) blur(2px);
-  
 }
 
 .card__text {
@@ -234,14 +236,14 @@
   transition: box-shadow 0.3s ease;
 }
 
-.footer {
+.save-button__container {
   display: grid;
   justify-items: center;
   margin-inline: clamp(33px, -9.3371rem + 48.6385vw, 551px);
   margin-block-end: 100px;
 }
 
-.footer__button {
+.save-button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -263,7 +265,7 @@
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
 }
 
-.dialog {
+.dialog[open] {
   border: 2px solid var(--accent-color, #000000);
   background-color: var(--background-color, #ffffff);
   padding: 29.5px 30.5px 28.5px 29.5px;
@@ -294,15 +296,14 @@
 }
 
 .dialog__button {
+  text-transform: uppercase;
   padding-block: 10.5px;
   margin-block-start: 30px;
   width: 100%;
 }
 
 /* свойства для buttons */
-.card__like-button,
-.footer__button,
-.dialog__button {
+.button {
   position: relative;
   z-index: 1;
   font-size: 14px;
@@ -313,20 +314,15 @@
   appearance: none;
 }
 
-.card__like-button:focus,
-.footer__button:focus,
-.dialog__button:focus {
+.button:focus {
   outline: none;
 }
-.card__like-button:focus-visible,
-.footer__button:focus-visible,
-.dialog__button:focus-visible {
+
+.button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color, #000000);
 }
 
-.card__like-button::before,
-.footer__button::before,
-.dialog__button::before {
+.button::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -339,9 +335,7 @@
   block-size: 100%;
 }
 
-.card__like-button:hover::before,
-.footer__button:hover::before,
-.dialog__button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
