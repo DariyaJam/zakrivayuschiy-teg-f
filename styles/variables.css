@@ -1,7 +1,14 @@
 :root {
+    --white-color: #fff;
+    --black-color: #000;
+
     --main-font-family: 'Inter', sans-serif;
     --accent-font-family: 'PressStart2P', fantasy;
 
     --card-title-font-weight: 700;
     --card-text-font-weight: 400;
+
+    --background-color: var(--white-color, #fff);
+    --font-color: var(--black-color, #000);
+    --decor-elements-color: var(--black-color, #000);
 }
