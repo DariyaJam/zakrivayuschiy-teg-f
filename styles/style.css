@@ -35,6 +35,8 @@
 
 .button {
     cursor: pointer;
+    position: relative;
+    z-index: 1;
     font-size: 14px;
     font-weight: 400;
     line-height: 0.9;
@@ -42,6 +44,32 @@
     background: var(--background-color, #fff);
     border: 2px solid var(--decor-elements-color, #000);
     appearance: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    box-shadow: 2px 2px 0 0 var(--decor-elements-color, #000);
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--decor-elements-color, #000);
+    transform: scaleX(0);
+    transform-origin: left;
+    inline-size: 100%;
+    block-size: calc(100% + 2px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
 }
 
 /* Стили для фильтров */
@@ -160,7 +188,8 @@
 }
 
 .button__text {
-    color: var(--font-color, #000);
+    color: var(--button-text-color, #fff);
+    mix-blend-mode: difference;
     font-size: inherit;
     line-height: inherit;
 }
@@ -183,7 +212,8 @@
 }
 
 .floppy__icon {
-    color: var(--font-color, #000);
+    color: var(--button-text-color, #fff);
+    mix-blend-mode: difference;
     block-size: 21px;
     inline-size: 21px;
 }

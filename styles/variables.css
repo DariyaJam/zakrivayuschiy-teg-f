@@ -10,6 +10,7 @@
 
     --background-color: var(--white-color, #fff);
     --font-color: var(--black-color, #000);
+    --button-text-color: var(--white-color, #fff);
     --decor-elements-color: var(--black-color, #000);
 
     --background-image: repeating-linear-gradient(
