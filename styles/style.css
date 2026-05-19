@@ -13,158 +13,243 @@
 /* Общие стили для всей страницы */
 
 .page {
-  color: var(--font-color, #000);
-  font-family: var(--main-font-family, 'Inter', sans-serif), sans-serif;
-  font-variation-settings: "wght" var(--card-text-font-weight, 400);
-  background-color: var(--background-color, #fff);
-  background-image: var(--background-image, none);
-  background-size: cover;
-  background-attachment: fixed;
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+    color: var(--font-color, #000);
+    font-family: var(--main-font-family, 'Inter', sans-serif), sans-serif;
+    font-variation-settings: "wght" var(--card-text-font-weight, 400);
+    background-color: var(--background-color, #fff);
+    background-image: var(--background-image, none);
+    background-size: cover;
+    background-attachment: fixed;
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
 }
 
 .content__container {
-  background: var(--background-color, #fff);
-  inline-size: min(100%, 700px);
-  margin: 50px auto;
-  border: 2px solid var(--decor-elements-color, #000);
+    background: var(--background-color, #fff);
+    inline-size: min(100%, 700px);
+    margin: 50px auto;
+    border: 2px solid var(--decor-elements-color, #000);
+}
+
+/* Стили и свойства для button */
+
+.button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0.9;
+    font-family: var(--accent-font-family, 'PressStart2P', fanstasy), fantasy;
+    background: var(--background-color, #fff);
+    border: 2px solid var(--decor-elements-color, #000);
+    appearance: none;
 }
 
 /* Стили для фильтров */
 
 .filter-grayscale {
-  filter: grayscale(75%);
+    filter: grayscale(75%);
 }
 
 .filter-saturate {
-  filter: saturate(280%);
+    filter: saturate(280%);
 }
 
 .filter-hue-rotate {
-  filter: hue-rotate(30deg);
+    filter: hue-rotate(30deg);
 }
 
 .filter-invert {
-  filter: invert(0.8);
+    filter: invert(0.8);
 }
 
 .filter-sepia {
-  filter: sepia(90%);
+    filter: sepia(90%);
 }
 
 .filter-blur {
-  filter: blur(5px);
+    filter: blur(5px);
 }
 
 .filter-multiple {
-  filter: hue-rotate(110deg) invert(0.2) blur(2px);
+    filter: hue-rotate(110deg) invert(0.2) blur(2px);
 }
 
 /* Стили для header */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  line-height: 1;
-  font-family: var(--accent-font-family, 'PressStart2P', fantasy), fantasy;
-  margin-block: 100px;
-  padding: clamp(120px, 7.1479rem + 1.5023vw, 136px) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    line-height: 1;
+    font-family: var(--accent-font-family, 'PressStart2P', fantasy), fantasy;
+    margin-block: 100px;
+    padding: clamp(120px, 7.1479rem + 1.5023vw, 136px) 0;
 }
 
 .header__logo {
-  font-size: clamp(49px, 2.7104rem + 1.5023vw, 65px);
-  margin-block: 0 20px;
+    font-size: clamp(49px, 2.7104rem + 1.5023vw, 65px);
+    margin-block: 0 20px;
 }
 
 .header__title {
-  font-size: clamp(14px, 0.6769rem + 0.8451vw, 23px);
-  text-transform: uppercase;
+    font-size: clamp(14px, 0.6769rem + 0.8451vw, 23px);
+    text-transform: uppercase;
 }
 
 /* Стили для секции с карточками */
 
 .card__title {
-  font-size: 18px;
-  font-variation-settings: "wght" var(--card-title-font-weight, 700);
-  line-height: 1.39;
-  padding: 3px 10px;
+    font-size: 18px;
+    font-variation-settings: "wght" var(--card-title-font-weight, 700);
+    line-height: 1.39;
+    padding: 3px 10px;
 }
 
 .card__image-container {
-  position: relative;
-  border-block: 2px solid var(--decor-elements-color, #000);
+    position: relative;
+    border-block: 2px solid var(--decor-elements-color, #000);
 }
 
 .card__label {
-  position: absolute;
-  z-index: 1;
-  inset-block-start: clamp(23px, 1.3935rem + 0.1878vw, 25px);
-  inset-inline-end: clamp(11px, 0.3794rem + 1.3146vw, 25px);
-  color: var(--decor-elements-color, #000);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.6;
-  font-family: var(--accent-font-family, 'PressStart2P', fantasy), fantasy;
-  text-shadow: 0 0 1px var(--background-color, #fff);
-  mix-blend-mode: hard-light;
+    position: absolute;
+    z-index: 1;
+    inset-block-start: clamp(23px, 1.3935rem + 0.1878vw, 25px);
+    inset-inline-end: clamp(11px, 0.3794rem + 1.3146vw, 25px);
+    color: var(--decor-elements-color, #000);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.6;
+    font-family: var(--accent-font-family, 'PressStart2P', fantasy), fantasy;
+    text-shadow: 0 0 1px var(--background-color, #fff);
+    mix-blend-mode: hard-light;
 }
 
 .card__image {
-  display: block;
-  aspect-ratio: 1;
-  inline-size: 100%;
-  object-position: right;
-  object-fit: cover;
+    display: block;
+    aspect-ratio: 1;
+    inline-size: 100%;
+    object-position: right;
+    object-fit: cover;
 }
 
 .card__text {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  margin: 25px;
-  font-size: 18px;
-  line-height: 1.17;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin: 25px;
+    font-size: 18px;
+    line-height: 1.17;
 }
 
 .card__btn-container {
-  display: flex;
-  justify-content: end;
-  gap: 7px;
-  margin: 0 25px 25px;
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+    margin: 0 25px 25px;
 }
 
 .card__icon-button {
-  border: 0;
+    border: 0;
 }
 
 .card__like-button {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 0.9;
-  font-family: var(--accent-font-family, 'PressStart2P', fanstasy), fantasy;
-  background: transparent;
-  border: 2px solid var(--decor-elements-color, #000);
-  padding: 10.5px 35px;
+    padding: 10.5px 35px;
 }
 
 .button__text {
-  color: var(--font-color, #000);
-  font-size: inherit;
-  line-height: inherit;
+    color: var(--font-color, #000);
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Стили для save button */
+
+.save-btn__container {
+    display: grid;
+    grid-template-columns: 1fr min(82.5%, 339px) 1fr;
+    margin-block-end: 100px;
+}
+
+.save-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    grid-column: 2;
+    padding: 15px 20px 15px 19px;
+}
+
+.floppy__icon {
+    color: var(--font-color, #000);
+    block-size: 21px;
+    inline-size: 21px;
+}
+
+/* Стили для диалогового окна */
+
+.dialog[open] {
+    border: 2px solid var(--decor-elements-color, #000);
+    background-color: var(--background-color, #fff);
+    padding: 30px;
+    max-inline-size: 357px;
+}
+
+.dialog::backdrop {
+    opacity: 0.75;
+    background: var(--black-color, #000);
+}
+
+.dialog__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: var(--font-color, #000);
+    font-family: var(--accent-font-family, "PressStart2P", fantasy), fantasy;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.dialog__floppy_icon {
+    flex-shrink: 0;
+    block-size: 39px;
+    inline-size: 39px;
+}
+
+.dialog__button {
+    text-transform: uppercase;
+    padding-block: 10.5px;
+    margin-block-start: 30px;
+    width: 100%;
+}
+
+@media (width <= 375px) {
+    .floppy__icon {
+        block-size: 28px;
+        inline-size: 28px;
+    }
+
+    .save-button {
+        flex-direction: column;
+    }
+
+    .dialog[open] {
+        padding: 30px 40px;
+        max-inline-size: 341px;
+    }
 }
 
 @supports (
   (text-stroke: 1px var(--background-color, #fff)) or
     (-webkit-text-stroke: 1px var(--background-color, #fff))
 ) {
-  .card__label {
-    -webkit-text-stroke: 1px var(--background-color, #fff);
-    text-stroke: 1px var(--background-color, #fff);
-    text-shadow: none;
-  }
+    .card__label {
+        -webkit-text-stroke: 1px var(--background-color, #fff);
+        text-stroke: 1px var(--background-color, #fff);
+        text-shadow: none;
+    }
 }
