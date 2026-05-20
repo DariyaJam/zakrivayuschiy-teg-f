@@ -1,12 +1,16 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
+    --red-color: #ff0000;
 
     --main-font-family: 'Inter', sans-serif;
     --accent-font-family: 'PressStart2P', fantasy;
 
     --card-title-font-weight: 700;
     --card-text-font-weight: 400;
+
+    --heart-contour-color: var(--black-color, #000);
+    --heart-sparks-color: var(--red-color, #ff0000);
 
     --background-color: var(--white-color, #fff);
     --font-color: var(--black-color, #000);
